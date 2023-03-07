@@ -2,9 +2,9 @@ name: Event Details [Issues]
 on:
   issues:
     types: [opened, edited, closed, reopened, labeled]
-  jobs:
-    output_issues:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Dump Event Details
-          run: echo '${{ toJSON(githhub) }}'
+jobs:
+  output_issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump Event Details
+        run: echo '${{ toJSON(githhub) }}'
