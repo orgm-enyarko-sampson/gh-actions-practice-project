@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Dump Event Details
-        run: echo '${{ github.event.issue }}'
+        run: echo '${{ toJSON(github.event.issue) }}'
